@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input{
+    width: 40px;
+    padding: 10px 12px;
+    border: none;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+margin-right: 20px;
+text-align: center;
+}
+
+.lanzar-btn {
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: burlywood;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.dados-q-cont {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20;
+    justify-content: center;
+    align-items: center;
+}
+
+.cantidad-dados {
+    font-size: 3rem;
+    margin-right: 30px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid;
+    padding: 12px 30px;
+    border-radius: 4px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: space-between;
+    width: 60px;
+}
+
+
+.btn-handler {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border: none;
+}
+
+.img-btn{
+    width: 40px;
+    height: 40px;
+}
+
+.btn-handler:nth-child(2) .img-btn {
+    transform: rotate(180deg);
+}
+
+.dados-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    perspective: 1000px;
+    margin-top: 40px;
+}
+
+.dado {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s ease-out;
+    margin: 20px;
+}
+
+.cara {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.front  { transform: translateZ(45px); }
+.back   { transform: rotateY(180deg) translateZ(45px); }
+.right  { transform: rotateY(90deg) translateZ(45px); }
+.left   { transform: rotateY(-90deg) translateZ(45px); }
+.top    { transform: rotateX(90deg) translateZ(45px); }
+.bottom { transform: rotateX(-90deg) translateZ(45px); }
+
+.puntos-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntos {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.uno  { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.dos  .puntos:nth-child(1) { top: 20%; left: 20%; }
+.dos  .puntos:nth-child(2) { bottom: 20%; right: 20%; }
+
+.tres .puntos:nth-child(1) { top: 20%; left: 20%; }
+.tres .puntos:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.tres .puntos:nth-child(3) { bottom: 20%; right: 20%; }
+
+.cuatro .puntos:nth-child(1) { top: 20%; left: 20%; }
+.cuatro .puntos:nth-child(2) { top: 20%; right: 20%; }
+.cuatro .puntos:nth-child(3) { bottom: 20%; left: 20%; }
+.cuatro .puntos:nth-child(4) { bottom: 20%; right: 20%; }
+
+.cinco .puntos:nth-child(1) { top: 20%; left: 20%; }
+.cinco .puntos:nth-child(2) { top: 20%; right: 20%; }
+.cinco .puntos:nth-child(3) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.cinco .puntos:nth-child(4) { bottom: 20%; left: 20%; }
+.cinco .puntos:nth-child(5) { bottom: 20%; right: 20%; }
+
+.seis .puntos:nth-child(1) { top: 20%; left: 20%; }
+.seis .puntos:nth-child(2) { top: 20%; right: 20%; }
+.seis .puntos:nth-child(3) { top: 50%; left: 20%; transform: translateY(-50%); }
+.seis .puntos:nth-child(4) { top: 50%; right: 20%; transform: translateY(-50%); }
+.seis .puntos:nth-child(5) { bottom: 20%; left: 20%; }
+.seis .puntos:nth-child(6) { bottom: 20%; right: 20%; }
